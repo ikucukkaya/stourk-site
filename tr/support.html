@@ -10,12 +10,14 @@
   body { font-family: -apple-system, system-ui, sans-serif; max-width: 640px;
          margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #222; }
   h1 { font-size: 1.6em; } h2 { font-size: 1.15em; margin-top: 1.6em; }
-  .lang { font-size: 0.85em; opacity: 0.7; }
+  .langs{display:inline-flex;border:1.5px solid rgba(0,0,0,.18);border-radius:999px;overflow:hidden;font:600 12px/1 ui-monospace,Menlo,monospace;letter-spacing:.12em;margin-bottom:1.4em}
+  .langs a{padding:9px 12px;text-decoration:none;color:inherit;opacity:.7}
+  .langs a.on{background:#313A59;color:#FFF5DE;opacity:1}
   @media (prefers-color-scheme: dark) { body { background:#111; color:#ddd; } a { color:#9cf; } }
 </style>
 </head>
 <body>
-<p class="lang"><a href="../support.html">English</a></p>
+<nav class="langs" aria-label="Language"><a href="/support.html" lang="en" hreflang="en">EN</a><a href="/tr/support.html" class="on" lang="tr" hreflang="tr">TR</a></nav>
 <h1>Stourk Destek</h1>
 <p>Stourk, fotoğraflarınla kayıtlı tarih ve yeri iPhone’unda özel bir hareketli
 yolculuğa çevirir. Hesap yok, sunucu yok, analitik yok.</p>
@@ -53,5 +55,6 @@ Ayarları → Stourk → Dil yolunu kullan.</p>
 
 <p style="margin-top:2.4em; font-size:0.9em; opacity:0.7">Uygulama içi harita verisi: OpenFreeMap ve
 OpenStreetMap katkıcıları. © 2026 Stourk.</p>
+<script>document.querySelectorAll('.langs a').forEach(function(a){a.addEventListener('click',function(){try{localStorage.setItem('stourk-lang',a.getAttribute('lang'))}catch(e){}})})</script>
 </body>
 </html>
