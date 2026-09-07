@@ -115,6 +115,8 @@
   .card h3{margin:14px 0 10px}
   .card p{color:var(--quiet);font-size:16px}
   .card::before{content:"";position:absolute;left:18px;right:18px;top:0;border-top:2px dashed var(--rule)}
+  .cards.two{grid-template-columns:repeat(2,1fr);max-width:760px;margin-inline:auto}
+  .aside{margin-top:18px;font:500 12px/1.7 var(--mono);letter-spacing:.06em;color:var(--quiet);max-width:34em}
 
   /* alternating paper bands */
   .band{background:linear-gradient(180deg,rgba(255,245,222,.0),rgba(255,245,222,.7) 18%,rgba(255,245,222,.7) 82%,rgba(255,245,222,0))}
@@ -156,7 +158,7 @@
     .feature.flip .copy{order:0}
     .feature .copy{max-width:none}
     .hero .phone{margin-top:40px}
-    .cards{grid-template-columns:1fr}
+    .cards,.cards.two{grid-template-columns:1fr}
     .ticket{grid-template-columns:1fr;padding:12px 26px}
     .ticket>div{padding:16px 0}
     .ticket>div+div::before{left:-26px;right:-26px;width:auto;top:-7px;bottom:auto;height:14px;background:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='20'%20height='14'%20viewBox='0%200%2020%2014'%3E%3Cdefs%3E%3ClinearGradient%20id='s'%20x1='0'%20y1='0'%20x2='0'%20y2='1'%3E%3Cstop%20offset='0'%20stop-color='#313A59'%20stop-opacity='.5'/%3E%3Cstop%20offset='.72'%20stop-color='#313A59'%20stop-opacity='0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle%20cx='10'%20cy='7'%20r='5.6'%20fill='#E4D6BA'/%3E%3Ccircle%20cx='10'%20cy='7'%20r='5.6'%20fill='url(#s)'/%3E%3Ccircle%20cx='10'%20cy='7'%20r='5.3'%20fill='none'%20stroke='#313A59'%20stroke-opacity='.16'%20stroke-width='.7'/%3E%3C/svg%3E") center/20px 14px repeat-x,linear-gradient(var(--rule),var(--rule)) center/100% 1px no-repeat}
@@ -208,8 +210,8 @@
     <div class="wrap">
       <div class="copy">
         <span class="kicker">A private atlas for iPhone</span>
-        <h1>Your photos remember the moments.<br><em>Stourk remembers the journey.</em></h1>
-        <p class="lede">Every place you stopped. Every summer you disappeared into. Every city you once called home. Your photo library has been keeping a map of your life, and Stourk lets you travel through it again.</p>
+        <h1>Your photos remember the moments.<br><em>Stourk finds the journey between them.</em></h1>
+        <p class="lede">Every photograph you keep already knows where and when it was taken. Put them together and something else appears: the shape of your life. Stourk turns the places hidden in your photo library into a journey you can watch, read and keep.</p>
         <div class="ctas">
           <a class="pill" href="#journey">Watch the reel</a>
           <a class="pill ghost" href="#privacy">What stays private</a>
@@ -226,9 +228,9 @@
 
   <div class="wrap strip rv">
     <div class="ticket">
-      <div><b>Your years</b><span>A summer, a decade, or all of it</span></div>
-      <div><b>Your cities</b><span>Each one writes you a letter</span></div>
-      <div><b>Yours only</b><span>Nothing leaves your iPhone</span></div>
+      <div><b>Trace</b><span>Where the years took you</span></div>
+      <div><b>Rediscover</b><span>Places you almost forgot</span></div>
+      <div><b>Keep</b><span>Letters, stamps and pieces of the journey</span></div>
     </div>
   </div>
 
@@ -238,8 +240,8 @@
       <div class="feature rv">
         <div class="copy">
           <span class="kicker">The journey</span>
-          <h2>Choose a year<br><em>you still think about.</em></h2>
-          <p class="lede">A summer. A decade. Or everything since your first photograph. Pick a piece of your life and see where it takes you.</p>
+          <h2>Choose <em>a chapter.</em></h2>
+          <p class="lede">A year you remember. A summer you almost don't. Or the whole story so far.</p>
         </div>
         <figure class="phone"><div class="screen"><img src="assets/shot-ready.jpg" alt="The boarding ticket with the years picked and Start the journey ready to tear" loading="lazy"></div></figure>
       </div>
@@ -251,8 +253,8 @@
       <div class="feature flip rv">
         <div class="copy">
           <span class="kicker">The flight</span>
-          <h2>You remember the trips.<br><em>Stourk remembers the route between them.</em></h2>
-          <p class="lede">Watch your life draw itself across the map. Cities appear, routes connect, and years that felt unrelated become one long journey.</p>
+          <h2>Somehow, <em>it was all one journey.</em></h2>
+          <p class="lede">The map glides from city to city while the stork draws the line between them. Every trip leaves its ink, and by the end your years are one route across the board.</p>
         </div>
         <div class="duo">
           <figure class="phone sm"><div class="screen"><img src="assets/shot-journey.jpg" alt="The stork crossing Europe over a hand-drawn map" loading="lazy"></div></figure>
@@ -268,7 +270,8 @@
         <div class="copy">
           <span class="kicker">The end card</span>
           <h2>A boarding pass<br><em>for your life.</em></h2>
-          <p class="lede">Some years deserve a boarding pass. The cities you crossed, the distance you travelled, the days you stopped long enough to take a photograph, printed into one small record of where life took you.</p>
+          <p class="lede">When the journey ends, it leaves something behind. The cities, the distance, the days you were out there, pressed into a boarding pass that could only belong to you.</p>
+          <p class="aside">LOOK CLOSER. THE BARCODE IS YOUR YEAR: ONE MARK FOR EVERY DAY YOU TOOK A PHOTOGRAPH.</p>
         </div>
         <figure class="phone"><div class="screen"><img src="assets/shot-endcard.jpg" alt="The end card over the finished map, with the calendar barcode" loading="lazy"></div></figure>
       </div>
@@ -283,22 +286,22 @@
       <div class="head rv">
         <span class="kicker">The post</span>
         <h2>Every city <em>writes you a letter.</em></h2>
-        <p class="lede">Not about landmarks. About your time there. Open İstanbul in 2019, Lisbon in 2024, the tiny town you visited once and almost forgot. Your photographs are waiting inside.</p>
+        <p class="lede">Not about what to see there. About the time you spent there. İstanbul remembers one version of you, Paris another, and somewhere you have almost forgotten is still waiting in the pile.</p>
       </div>
       <div class="feature rv">
         <figure class="phone"><div class="screen"><img src="assets/shot-letters.jpg" alt="A pile of envelopes, one from each city" loading="lazy"></div></figure>
         <div class="copy">
-          <h3>Open the envelope</h3>
-          <p class="lede">What a city wrote is for whoever tears it open.</p>
-          <h3 style="margin-top:34px">Then the prints</h3>
-          <p class="lede">Behind the note, your photographs from that city, dated on the foot.</p>
+          <h3>A note from somewhere you've been</h3>
+          <p class="lede">What the city wrote is for whoever tears the envelope.</p>
+          <h3 style="margin-top:34px">And what you left there</h3>
+          <p class="lede">Behind the note, the photographs from that city, dated on the foot.</p>
         </div>
       </div>
       <div class="feature flip rv" style="margin-top:80px">
         <div class="copy">
           <span class="kicker">The prints</span>
-          <h2>Some photographs deserve<br><em>to leave the camera roll.</em></h2>
-          <p class="lede">The ones you forgot you took. The blurry dinner, the train window, the street you can no longer name. Stourk brings them back as little prints from somewhere you once were.</p>
+          <h2>The ones you<br><em>forgot you took.</em></h2>
+          <p class="lede">The blurry dinner. The train window. That street whose name you never learned. Sometimes the photographs you weren't looking for are the ones that bring a place back.</p>
         </div>
         <figure class="phone"><div class="screen"><img src="assets/shot-print.jpg" alt="A print held up, showing its date and coordinates" loading="lazy"></div></figure>
       </div>
@@ -314,7 +317,7 @@
         <div class="copy">
           <span class="kicker">The passport</span>
           <h2>A passport <em>no country</em><br>could issue.</h2>
-          <p class="lede">No borders, no visas. Just the places that became part of your story. Everywhere you have been leaves a stamp, and tilting your phone shows what the pages keep in the dark.</p>
+          <p class="lede">No borders to cross. No visas to collect. Just the places that became part of your story, stamped one by one until the pages are yours alone.</p>
         </div>
         <figure class="phone lg"><div class="screen"><img src="assets/shot-passport.jpg" alt="An open passport with stamps on engraved pages" loading="lazy"></div></figure>
       </div>
@@ -327,8 +330,8 @@
       <div class="feature flip rv">
         <div class="copy">
           <span class="kicker">Labels &amp; the case</span>
-          <h2>Your suitcase<br><em>gets better with age.</em></h2>
-          <p class="lede">Every place leaves something behind. A label from Tokyo. One from Kaş. One from the city you swore you would return to. Keep travelling and let the case tell the rest.</p>
+          <h2>Everywhere leaves<br><em>something behind.</em></h2>
+          <p class="lede">A label from Tokyo. One from Kaş. One from somewhere you only visited once. Eventually, the suitcase starts telling the story for you.</p>
         </div>
         <div class="duo">
           <figure class="phone sm"><div class="screen"><img src="assets/shot-label.jpg" alt="A luggage label being dealt" loading="lazy"></div></figure>
@@ -338,12 +341,11 @@
 
       <div class="head rv" style="margin:96px auto 0">
         <span class="kicker">Keepsakes</span>
-        <h2>Some journeys are worth <em>keeping outside the app.</em></h2>
+        <h2>Some journeys deserve <em>to leave the screen.</em></h2>
       </div>
-      <div class="cards rv">
-        <div class="card"><span class="stamp">Film</span><h3>Turn yours into a film</h3><p>The whole route, rendered on your iPhone and ready to share.</p></div>
-        <div class="card"><span class="stamp">Poster</span><h3>Hang the route on a wall</h3><p>The finished map and its boarding pass, saved as a poster.</p></div>
-        <div class="card"><span class="stamp">Keep</span><h3>Save the journey. Not just the photos.</h3><p>A year you do not want to forget, kept where the app cannot lose it.</p></div>
+      <div class="cards two rv">
+        <div class="card"><span class="stamp">Keep it still</span><h3>Turn the finished journey into a poster.</h3><p>The map with its ink and the boarding pass, on a wall.</p></div>
+        <div class="card"><span class="stamp">Let it move</span><h3>Take the whole flight with you as a film.</h3><p>Every leg, every landing, yours to carry and to share.</p></div>
       </div>
     </div>
   </section>
@@ -355,7 +357,7 @@
         <div>
           <span class="kicker">Privacy</span>
           <h2>Your memories <em>aren't our business.</em></h2>
-          <p class="lede" style="margin-top:16px">Stourk does not need an account to know where you have been. Your photographs stay on your iPhone and your journey is built there. Nothing is uploaded, nothing is tracked. Your life does not need to become our data.</p>
+          <p class="lede" style="margin-top:16px">No account. No cloud library. No analytics watching where you have been. Stourk builds your journey on your iPhone, and your photographs stay where they already are.</p>
           <ul>
             <li>Stourk reads the date and location stored with your photographs, and nothing else about you.</li>
             <li>No account, no sign-in, no server of ours. Nothing is uploaded, ever.</li>
@@ -379,9 +381,9 @@
       <div class="head rv" style="margin-bottom:0">
         <span class="kicker">Boarding soon</span>
         <h2><span class="coral">Stourk</span> is <em>on its way</em> to the App Store.</h2>
-        <p class="lede">iPhone, iOS 18 and later. Made in Istanbul by one person, for the photographs you already have.</p>
+        <p class="lede">iPhone, iOS 18 and later. Made in İstanbul by one person, for the photographs you already have.<br>Be there when Stourk takes off.</p>
         <div class="ctas" style="display:flex;justify-content:center;gap:12px;margin-top:34px;flex-wrap:wrap">
-          <a class="pill" href="mailto:hello@stourk.com?subject=Stourk">Ask about the beta</a>
+          <a class="pill" href="mailto:hello@stourk.com?subject=Stourk">Join the first flight</a>
           <a class="pill ghost" href="support.html">Support</a>
         </div>
       </div>
