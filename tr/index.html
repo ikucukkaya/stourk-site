@@ -82,6 +82,7 @@
     -webkit-mask:url(../assets/iphone-screen-mask.png) center/100% 100% no-repeat;mask:url(../assets/iphone-screen-mask.png) center/100% 100% no-repeat}
   .phone .screen>*{width:100%;height:100%;object-fit:cover}
   .phone.lg{max-width:380px}
+  #reel{scroll-margin-top:90px}
   .phone.sm{max-width:270px}
 
   /* ---------- ticket strip ---------- */
@@ -223,12 +224,12 @@
         <h1>Fotoğrafların anları hatırlar.<br><em>Stourk aradaki yolculuğu bulur.</em></h1>
         <p class="lede">Sakladığın her fotoğraf nerede ve ne zaman çekildiğini zaten biliyor. Bir araya gelince başka bir şey ortaya çıkıyor: hayatının şekli. Stourk, fotoğraf kütüphanende saklı yerleri yeniden izleyebileceğin, keşfedebileceğin ve saklayabileceğin bir yolculuğa dönüştürür.</p>
         <div class="ctas">
-          <a class="pill" href="#journey">Filmi izle</a>
+          <a class="pill" href="#reel" onclick="var v=document.querySelector('#reel video');if(v){v.play().catch(function(){})}">Filmi izle</a>
           <a class="pill ghost" href="#privacy">Neler gizli kalır</a>
         </div>
         <p class="fine">HİÇBİR ŞEY YÜKLENMEZ · HESAP YOK · ANALİTİK YOK</p>
       </div>
-      <figure class="phone lg">
+      <figure class="phone lg" id="reel">
         <div class="screen">
           <video src="../assets/stourk-journey.mp4" poster="assets/shot-cover.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Otuz saniyede Stourk: yıllar seçilir, leylek rotayı uçar, mektuplar, pasaport ve etiketler açılır"></video>
         </div>

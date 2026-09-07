@@ -83,6 +83,7 @@
     -webkit-mask:url(assets/iphone-screen-mask.png) center/100% 100% no-repeat;mask:url(assets/iphone-screen-mask.png) center/100% 100% no-repeat}
   .phone .screen>*{width:100%;height:100%;object-fit:cover}
   .phone.lg{max-width:380px}
+  #reel{scroll-margin-top:90px}
   .phone.sm{max-width:270px}
 
   /* ---------- ticket strip ---------- */
@@ -224,12 +225,12 @@
         <h1>Your photos remember the moments.<br><em>Stourk finds the journey between them.</em></h1>
         <p class="lede">Every photograph you keep already knows where and when it was taken. Put them together and something else appears: the shape of your life. Stourk turns the places hidden in your photo library into a journey you can watch, read and keep.</p>
         <div class="ctas">
-          <a class="pill" href="#journey">Watch the reel</a>
+          <a class="pill" href="#reel" onclick="var v=document.querySelector('#reel video');if(v){v.play().catch(function(){})}">Watch the reel</a>
           <a class="pill ghost" href="#privacy">What stays private</a>
         </div>
         <p class="fine">NOTHING UPLOADED · NO ACCOUNT · NO ANALYTICS</p>
       </div>
-      <figure class="phone lg">
+      <figure class="phone lg" id="reel">
         <div class="screen">
           <video src="assets/stourk-journey.mp4" poster="assets/shot-cover.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Thirty seconds of Stourk: years are picked, the stork flies the route, letters, passport and labels are opened"></video>
         </div>
